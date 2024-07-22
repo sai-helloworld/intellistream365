@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .product {
+        display: flex;
+        padding: 10px;
+      }
+
+      .image {
+        display: inline-block;
+        width: 30%;
+        padding: 5px;
+        background-color: yellow;
+      }
+      .product-desc {
+        z-index: 2;
+        background-color: aqua;
+      }
+
+      .image:hover {
+        scale: 1.05;
+      }
+      .product-list {
+        max-width: 2200px;
+        margin: auto;
+      }
+      .product-name {
+        font-size: clamp(1vw, 2vw, 44px);
+        background-color: #505050;
+        padding-block: 8px;
+      }
+
+      .product-rating {
+        font-size: clamp(1vw, 2vw, 44px);
+      }
+      .product-pricing {
+        display: flex;
+        font-weight: 900;
+        font-size: clamp(1vw, 2.5vw, 44px);
+      }
+      .product-pricing > div:nth-of-type(1) {
+        margin-left: 5px;
+        font-size: clamp(1vw, 1.5vw, 44px);
+        font-weight: 100;
+        color: #505050;
+        align-self: flex-end;
+      }
+      .product-pricing > div:nth-of-type(2) {
+        margin-left: 5px;
+        font-size: clamp(1vw, 1.5vw, 44px);
+        font-weight: 100;
+        color: #232323;
+        align-self: flex-end;
+      }
+      /* .product-pricing > div:nth-of-type(1) s{
+        font-weight: 100;
+        color: #505050;
+      } */
+      .product-pricing:nth-child() {
+        color: yellow;
+      }
+      .product-delivery {
+        font-size: clamp(1vw, 2vw, 44px);
+      }
+      .product-options {
+        font-size: clamp(1vw, 2vw, 44px);
+        width: 100px;
+        padding: 3px;
+        border: 2px solid #939393;
+        border-radius: 8px;
+        margin-inline: 10px;
+      }
+      .product-options:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product">
+      <img class="image" src="images/product-1.jpg" alt="image" />
+      <div class="product-desc">
+        <div class="product-name">
+          ZEBRONICS OPTIMUS Gaming Keyboard & Mouse Combo, Braided Cable USB,
+          Upto 3600 DPI, 6 Buttons, High Resolution Sensor, Multicolor LED,
+          Dedicated Macro Keys, 117 Keys (Black)
+        </div>
+        <div class="product-rating">4.5/5</div>
+        <div class="product-pricing">
+          <sup>₹</sup>849
+          <div>M.R.P:<s>₹1200</s></div>
+          <div>(30%off)</div>
+        </div>
+        <div class="product-delivery">Free Delivery</div>
+        <div class="product-options" align="center">more details</div>
+      </div>
+    </div>
+  </body>
+</html>
