@@ -1,6 +1,6 @@
 {
   "1": {
-    "image_link": "/images/product-1.jpg",
+    "image_link": "images/product-1.jpg",
     "name": "ZEBRONICS OPTIMUS Gaming Keyboard & Mouse Combo, Braided Cable USB, Upto 3600 DPI, 6 Buttons, High Resolution Sensor, Multicolor LED, Dedicated Macro Keys, 117 Keys (Black)",
     "rating": "4.5",
     "price": "849",
@@ -9,7 +9,7 @@
     "delivery": "FREE delivery"
   },
   "2": {
-    "image_link": "/images/product-1.jpg",
+    "image_link": "images/product-1.jpg",
     "name": "ZEBRONICS OPTIMUS Gaming Keyboard & Mouse Combo, Braided Cable USB, Upto 3600 DPI, 6 Buttons, High Resolution Sensor, Multicolor LED, Dedicated Macro Keys, 117 Keys (Black)",
     "rating": "4.0",
     "price": "399",
