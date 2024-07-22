@@ -95,7 +95,7 @@
 async function fetchJSON() {
   try {
     // Fetch the JSON file
-    const response = await fetch("exp.json");
+    const response = await fetch("database.json");
 
     // Check if the response is okay
     if (!response.ok) {
