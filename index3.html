@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Modal Example</title>
+    <style>
+      /* Modal Styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+      }
+
+      #caption {
+        margin: auto;
+        display: block;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 20px;
+      }
+
+      #close {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+        color: #fff;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Thumbnail Image -->
+    <img
+      src="images/product-1.jpg"
+      alt="Thumbnail"
+      id="thumbnail"
+      style="cursor: pointer; width: 300px"
+    />
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <span id="close">&times;</span>
+      <img class="modal-content" id="modalImage" />
+      <div id="caption"></div>
+    </div>
+
+    <script>
+      // Get the modal, image, and close button
+      const modal = document.getElementById("myModal");
+      const img = document.getElementById("thumbnail");
+      const modalImg = document.getElementById("modalImage");
+      const captionText = document.getElementById("caption");
+      const closeBtn = document.getElementById("close");
+
+      // When the user clicks on the image, open the modal
+      img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src.replace("small-image", "large-image"); // Ensure large image path
+        captionText.innerHTML = this.alt;
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      closeBtn.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
